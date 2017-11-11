@@ -1,17 +1,17 @@
 fn main() {
-    let some_five = Some(5);
-    let some_six = plus_one(some_five);
-    let none = plus_one(None);
+    let v: Vec<i32> = Vec::new();
+    println!("v: {:?}", v);
+    let mut v = vec![1, 2, 3];
 
-    println!("{:?}", some_five);
-    println!("{:?}", some_six);
-    println!("{:?}", none);
+    v.push(5);
+    v.push(6);
 
-}
+    println!("v: {:?}", v);
 
-fn plus_one(x: Option<i32>) -> Option<i32> {
-    match x {
-        None => None,
-        Some(i) => Some(i + 1),
-    }
+
+    let third = v[2];
+    println!("third: {:?}", third);
+    println!("v.get(2): {:?}", v.get(2));
+    v.push(7);
+    println!("v: {:?}", v);
 }
