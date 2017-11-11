@@ -1,5 +1,5 @@
 [package]
-name = "rust_guessing_game"
+name = "guessing_game"
 version = "0.1.0"
 authors = ["Manu Phatak <manu@thinkcerca.com>"]
 
