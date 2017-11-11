@@ -1,25 +1,17 @@
-#[derive(Debug)]
-enum Coin {
-    Penny,
-    Nickel,
-    Dime,
-    Quarter,
-}
-
-impl Coin {
-    fn value(&self) -> u32 {
-        match self {
-            &Coin::Penny => 1,
-            &Coin::Nickel => 5,
-            &Coin::Dime => 10,
-            &Coin::Quarter => 25,
-        }
-    }
-}
-
 fn main() {
-    println!("Penny value: {:?}", Coin::Penny.value());
-    println!("Nickel value: {:?}", Coin::Nickel.value());
-    println!("Dime value: {:?}", Coin::Dime.value());
-    println!("Quarter value: {:?}", Coin::Quarter.value());
+    let some_five = Some(5);
+    let some_six = plus_one(some_five);
+    let none = plus_one(None);
+
+    println!("{:?}", some_five);
+    println!("{:?}", some_six);
+    println!("{:?}", none);
+
+}
+
+fn plus_one(x: Option<i32>) -> Option<i32> {
+    match x {
+        None => None,
+        Some(i) => Some(i + 1),
+    }
 }
