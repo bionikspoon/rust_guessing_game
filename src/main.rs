@@ -1,17 +1,15 @@
+use std::collections::HashMap;
+
 fn main() {
-    let v: Vec<i32> = Vec::new();
-    println!("v: {:?}", v);
-    let mut v = vec![1, 2, 3];
+    let mut scores = HashMap::new();
 
-    v.push(5);
-    v.push(6);
+    scores.insert(String::from("Blue"), 10);
+    scores.insert(String::from("Yellow"), 50);
 
-    println!("v: {:?}", v);
+    println!("scores {:?}", scores);
+    let team_name = String::from("Blue");
+    let score = scores.get(&team_name);
+    println!("score {:?}", score);
 
 
-    let third = v[2];
-    println!("third: {:?}", third);
-    println!("v.get(2): {:?}", v.get(2));
-    v.push(7);
-    println!("v: {:?}", v);
 }
