@@ -1,15 +1,25 @@
-use std::collections::HashMap;
-
 fn main() {
-    let mut scores = HashMap::new();
+    let number_list = vec![34, 50, 25, 100, 65];
 
-    scores.insert(String::from("Blue"), 10);
-    scores.insert(String::from("Yellow"), 50);
+    let mut largest = number_list[0];
 
-    println!("scores {:?}", scores);
-    let team_name = String::from("Blue");
-    let score = scores.get(&team_name);
-    println!("score {:?}", score);
+    for number in number_list {
+        if number > largest {
+            largest = number;
+        }
+    }
 
+    println!("The largest number is {}", largest);
 
+    let number_list = vec![102, 34, 6000, 89, 54, 2, 43, 8];
+
+    let mut largest = number_list[0];
+
+    for number in number_list {
+        if number > largest {
+            largest = number;
+        }
+    }
+
+    println!("The largest number is {}", largest);
 }
